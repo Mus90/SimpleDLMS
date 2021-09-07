@@ -32,24 +32,32 @@ These instructions are to install Simple DL on a standard Ubuntu Linux variant, 
 
 ### Step 1: Getting the sample archive and code for offline access
 
-1. Create a new Linux user account.  In this example the account is called *docs*.
+1. Clone the project repo
 
 ```
-sudo adduser docsjournalctl -xe
+git@github.com:Mus90/SimpleDLMS.git
 ```
 
-2. Log in as the docs users.  In the user's home directory, create a directory named *simpledl* and change into this directory.
+2. Build simpledl docker image.
 
 ```
-mkdir simpledl
-cd simpledl
+docker build -t simpledl
 ```
 
-3. Obtain the source files and sample repository from github by cloning the repository into the simpledl directory.  Do not forget the period at the end!
+3. Run the docker container.
 
 ```
-git clone https://github.com/slumou/simpledl.git .
+docker run 9090:80 simpledl:latest
 ```
+
+
+
+
+*------------------------------*
+
+
+
+
 
 4. Uncompress the *sampledata*, *sampledb* and *samplepublic_html* archive files into the home directory.  You should then have *simpledl*, *public_html*, *data* and *db* in the home directory.
 
