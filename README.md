@@ -12,13 +12,13 @@ system.
 git@github.com:Mus90/SimpleDLMS.git
 ```
 
-2. Build simpledl docker image.
+2. Build simpledl docker image
 
 ```
-docker build -t simpledl.
+docker build -t simpledl .
 ```
 
-3. Run the docker container.
+3. Run the docker container
 
 ```
 docker run --name simpledl -p 9090:80 simpledl:latest
