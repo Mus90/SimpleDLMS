@@ -23,6 +23,7 @@ docker build -t simpledl .
 ```
 docker run --name simpledl -p 9090:80 simpledl:latest
 ```
+4. Navigate to http://localhost:9090/instance/public_html/
 
 
 
