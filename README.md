@@ -26,6 +26,27 @@ docker run --name simpledl -p 9090:80 simpledl:latest
 4. Navigate to http://localhost:9090/instance/public_html/
 
 
+To add a new collection, you need to do the following:
+
+1. Add a folder in data/spreadsheets (Example: etd2025)
+
+2. Inside data/spreadsheets/etd2025, update the csv file to be (etd2025.csv)
+
+3. Update collection.csv in data/spreadsheets to add a new line for the created collection.
+
+4. In public_html/collcetion, add a new colloction folder + logo file.
+
+5. Then run the following commands:
+
+- perl simpledl/bin/import.pl
+
+- perl simpledl/bin/index.pl
+
+- perl simpledl/bin/generate.pl --website --force
+
+- perl simpledl/bin/generate.pl --all
+
+
 
 
 
